@@ -12,13 +12,13 @@ export const Experience = () => {
       role: "KPVDR BOTSAPI Pvt Ltd",
       position: "Software Engineer - Python",
       period: "Aug 24 - Jan 25",
-      description: "Led Google Cloud learning initiatives and helped students get hands-on with cloud technologies through gamified challenges.",
+      description: "At KPVDR BOTSAPI LLC, I worked as a Software Engineer – Python, contributing to backend development and building Python modules, while also working on BlackArch and other security-scanning tools to support efficient automation and smooth project delivery.",
     },
     {
       role: "HCLTech",
       position: "Software Developer Intern",
       period: "Jan 24 - Apr 24",
-      description: "Developed EcocycleHub, an IoT-based Android app for campus bicycle management using smart locks and real-time tracking.",
+      description: "At HCLTech, I worked on EcoCycle Hub, an IoT-based solution that automates campus bicycle booking, tracking, and returns using smart locks and real-time availability — promoting sustainable commuting and reducing manual processes",
     },
   ];
 

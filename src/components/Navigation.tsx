@@ -31,9 +31,9 @@ export const Navigation = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="fixed bottom-4 sm:bottom-8 inset-x-0 mx-auto z-50 w-max"
+      className="fixed inset-x-0 bottom-4 sm:bottom-8 z-50 flex justify-center"
     >
-      <div className="bg-card/80 backdrop-blur-lg border border-border rounded-full px-6 py-3 shadow-lg">
+        <div className="bg-card/80 backdrop-blur-lg border border-border rounded-full px-6 py-3 shadow-lg pointer-events-auto">
         <div className="flex items-center justify-center gap-2">
           {socialLinks.map((link, index) => (
             <motion.a
