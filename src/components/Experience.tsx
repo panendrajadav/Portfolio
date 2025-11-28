@@ -1,0 +1,133 @@
+import { motion } from "framer-motion";
+
+export const Experience = () => {
+  const experiences = [
+    {
+      role: "Microsoft For Startups",
+      position: "Founder's Hub Member",
+      period: "Feb 25 - Present",
+      description: "Building innovative solutions with Microsoft's startup ecosystem. Access to Azure credits, technical resources, and mentorship.",
+    },
+    {
+      role: "KPVDR BOTSAPI Pvt Ltd",
+      position: "Software Engineer - Python",
+      period: "Aug 24 - Jan 25",
+      description: "Led Google Cloud learning initiatives and helped students get hands-on with cloud technologies through gamified challenges.",
+    },
+    {
+      role: "HCLTech",
+      position: "Software Developer Intern",
+      period: "Jan 24 - Apr 24",
+      description: "Developed EcocycleHub, an IoT-based Android app for campus bicycle management using smart locks and real-time tracking.",
+    },
+  ];
+
+  const learning = [
+    "Agentic AI systems and autonomous agents",
+    "Advanced Web3 and smart contract development",
+    "LangChain and AI orchestration frameworks",
+    "System design and scalable architectures",
+  ];
+
+  const buildingNext = [
+    "Multi-agent AI systems for complex workflows",
+    "Cross-chain DeFi applications",
+    "Open-source contributions to AI/ML tools",
+    "Educational content for aspiring developers",
+  ];
+
+  return (
+    <section id="experience" className="py-20 px-6 bg-muted/30">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="space-y-20"
+        >
+          {/* Experience */}
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-12">Experience</h2>
+            <div className="space-y-8">
+              {experiences.map((exp, index) => (
+                <motion.div
+                  key={exp.role}
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="relative pl-8 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-accent before:rounded-full before:ring-4 before:ring-accent/20"
+                >
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                    <div>
+                      <h3 className="text-xl font-bold">{exp.role}</h3>
+                      <p className="text-muted-foreground">{exp.position}</p>
+                    </div>
+                    <span className="text-sm text-muted-foreground font-mono mt-1 md:mt-0">
+                      {exp.period}
+                    </span>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {exp.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* Learning & Building */}
+          <div className="grid md:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-bold mb-6">Currently Learning</h3>
+              <ul className="space-y-3">
+                {learning.map((item, index) => (
+                  <motion.li
+                    key={item}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1, duration: 0.4 }}
+                    viewport={{ once: true }}
+                    className="flex items-start gap-3 text-muted-foreground"
+                  >
+                    <span className="text-accent mt-1">▸</span>
+                    <span>{item}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-bold mb-6">What I Want to Build Next</h3>
+              <ul className="space-y-3">
+                {buildingNext.map((item, index) => (
+                  <motion.li
+                    key={item}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 + 0.2, duration: 0.4 }}
+                    viewport={{ once: true }}
+                    className="flex items-start gap-3 text-muted-foreground"
+                  >
+                    <span className="text-accent mt-1">▸</span>
+                    <span>{item}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
