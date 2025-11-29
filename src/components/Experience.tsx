@@ -22,19 +22,7 @@ export const Experience = () => {
     },
   ];
 
-  const learning = [
-    "Agentic AI systems and autonomous agents",
-    "Advanced Web3 and smart contract development",
-    "LangChain and AI orchestration frameworks",
-    "System design and scalable architectures",
-  ];
 
-  const buildingNext = [
-    "Multi-agent AI systems for complex workflows",
-    "Cross-chain DeFi applications",
-    "Open-source contributions to AI/ML tools",
-    "Educational content for aspiring developers",
-  ];
 
   return (
     <section id="experience" className="py-20 px-6 bg-muted/30">
@@ -44,7 +32,7 @@ export const Experience = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="space-y-20"
+          className=""
         >
           {/* Experience */}
           <div>
@@ -76,56 +64,7 @@ export const Experience = () => {
             </div>
           </div>
 
-          {/* Learning & Building */}
-          <div className="grid md:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-bold mb-6">Currently Learning</h3>
-              <ul className="space-y-3">
-                {learning.map((item, index) => (
-                  <motion.li
-                    key={item}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1, duration: 0.4 }}
-                    viewport={{ once: true }}
-                    className="flex items-start gap-3 text-muted-foreground"
-                  >
-                    <span className="text-accent mt-1">▸</span>
-                    <span>{item}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-bold mb-6">What I Want to Build Next</h3>
-              <ul className="space-y-3">
-                {buildingNext.map((item, index) => (
-                  <motion.li
-                    key={item}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 + 0.2, duration: 0.4 }}
-                    viewport={{ once: true }}
-                    className="flex items-start gap-3 text-muted-foreground"
-                  >
-                    <span className="text-accent mt-1">▸</span>
-                    <span>{item}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
-          </div>
         </motion.div>
       </div>
     </section>

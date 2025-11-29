@@ -69,15 +69,16 @@ export const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className={`
-                  bg-card border border-border rounded-3xl p-8 
-                  transition-all duration-300 group cursor-pointer relative overflow-hidden
-                  hover:shadow-accent/20 hover:shadow-2xl
-                  ${project.highlight ? 'md:col-span-1' : 'md:col-span-1'}
-                `}
+                whileHover={{ scale: 1.05, y: -8 }}
+                className="relative group cursor-pointer"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-accent/10 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className={`
+                  bg-card border border-border rounded-3xl p-8 
+                  transition-all duration-300 relative overflow-hidden
+                  group-hover:shadow-accent/20 group-hover:shadow-2xl
+                  ${project.highlight ? 'md:col-span-1' : 'md:col-span-1'}
+                `}>
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl" />
                 <div className="flex items-start justify-between mb-4 relative z-10">
                   <h3 className="text-2xl font-bold">{project.title}</h3>
                   <div className="flex gap-2">
@@ -110,6 +111,7 @@ export const Projects = () => {
                       {tag}
                     </span>
                   ))}
+                </div>
                 </div>
               </motion.div>
             ))}

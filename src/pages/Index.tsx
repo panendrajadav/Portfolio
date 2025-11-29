@@ -6,6 +6,7 @@ import { TechStack } from "@/components/TechStack";
 import { GoogleSearch } from "@/components/GoogleSearch";
 import { GitHubActivity } from "@/components/GitHubActivity";
 import { Projects } from "@/components/Projects";
+import { VolunteerActivities } from "@/components/VolunteerActivities";
 import { Experience } from "@/components/Experience";
 import { Footer } from "@/components/Footer";
 
@@ -16,11 +17,12 @@ const Index = () => {
       <Greeting />
       <Hero />
       <About />
+      <Experience />
       <TechStack />
       <GoogleSearch />
       <GitHubActivity />
       <Projects />
-      <Experience />
+      <VolunteerActivities />
       <Footer />
     </div>
   );
