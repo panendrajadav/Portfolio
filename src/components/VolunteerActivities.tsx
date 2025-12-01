@@ -5,53 +5,53 @@ export const VolunteerActivities = () => {
     {
       title: "e-Yantra Competition - Team Lead",
       description: "Led my team in the e-Yantra robotics competition using Python and ML.",
-      image: "/eyan.png"
+      image: "./eyan.png"
     },
     {
       title: "AI/ML with Data Science Training & Internship",
       description: "Completed a 6-week AI/ML internship and built a Credit Card Fraud Detection model.",
-      image: "/image.png"
+      image: "./image.png"
     },
     
     {
       title: "Build with AI - Google Event",
       description: "Participated in Google's AI workshop and networking event",
-      image: "/bulidwithai.png"
+      image: "./bulidwithai.png"
     },
     {
       title: "SAP Event",
       description: "Attended SAP technology conference and innovation showcase",
-      image: "/sap.png"
+      image: "./sap.png"
     },
     {
       title: "Content Creator Event at MS Office",
       description: "Microsoft content creator meetup and collaboration session",
-      image: "/content.png"
+      image: "./content.png"
     },
     {
       title: "DevFest Extended at Apura Office by Google",
       description: "Google Developer Festival with tech talks and workshops",
-      image: "/devfest.png"
+      image: "./devfest.png"
     },
     {
       title: "Expert Live India at MS Office",
       description: "Microsoft Expert Live session with industry professionals",
-      image: "/expert.png"
+      image: "./expert.png"
     },
     {
       title: "Google Arcade Cloud Facilitator Program 2024",
       description: "Completed cloud facilitator program and received swags",
-      image: "/arcade.png"
+      image: "./arcade.png"
     },
     {
       title: "Unisys Online Hackathon",
       description: "Reached pre-finals in Unisys innovation hackathon",
-      image: "/unisys.png"
+      image: "./unisys.png"
     },
     {
       title: "Arbitrum Open House Hackathon",
       description: "Participated in blockchain hackathon on Arbitrum network",
-      image: "/openhouse.png"
+      image: "./openhouse.png"
     }
   ];
 
