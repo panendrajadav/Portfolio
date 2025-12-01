@@ -62,6 +62,14 @@
         }
       }(window.location))
     </script>
+    <script>
+      // Suppress extension errors
+      window.addEventListener('error', function(e) {
+        if (e.message && e.message.includes('Extension context invalidated')) {
+          e.preventDefault();
+        }
+      });
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
