@@ -11,12 +11,24 @@ export const GitHubActivity = () => {
   useEffect(() => {
     const fetchGitHubData = async () => {
       try {
-        // Fetch contributions
-        const contributionsResponse = await fetch(`https://github-contributions-api.jogruber.de/v4/panendrajadav?y=last`);
+        // Fetch all-time contributions
+        const contributionsResponse = await fetch(`https://github-contributions-api.jogruber.de/v4/panendrajadav`);
         const contributionsData = await contributionsResponse.json();
-        const currentYear = contributionsData.total?.lastYear || 77;
-        const previousYear = 77;
-        setTotalContributions(currentYear + previousYear);
+        
+        // Sum all years from the response
+        let totalContribs = 0;
+        if (contributionsData.contributions) {
+          contributionsData.contributions.forEach(yearData => {
+            totalContribs += yearData.count || 0;
+          });
+        }
+        
+        // Fallback to total field if available
+        if (totalContribs === 0) {
+          totalContribs = contributionsData.total?.all || contributionsData.total?.lastYear || 189;
+        }
+        
+        setTotalContributions(totalContribs);
 
         // Fetch recent repositories
         const reposResponse = await fetch('https://api.github.com/users/panendrajadav/repos?sort=updated&per_page=3');
@@ -30,7 +42,7 @@ export const GitHubActivity = () => {
         setRecentCommits(pushEvents);
       } catch (error) {
         console.error('Error fetching GitHub data:', error);
-        setTotalContributions(154);
+        setTotalContributions(189);
       }
     };
     fetchGitHubData();
