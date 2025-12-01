@@ -44,7 +44,7 @@ export const GoogleSearch = () => {
             <div className="relative overflow-hidden rounded-[10px] shadow-2xl transition-all duration-300 group-hover:shadow-accent/20 group-hover:shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[10px]" />
               <img
-                src="./search.png"
+                src="search.png"
                 alt="Google Search Results for Panendra Jadav"
                 className="w-full h-auto transition-transform duration-300 relative z-10"
               />
