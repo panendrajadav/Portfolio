@@ -70,7 +70,7 @@ export const VolunteerActivities = () => {
         </p>
       </motion.div>
 
-      <div className="w-full overflow-hidden py-8">
+      <div className="w-full overflow-x-auto scrollbar-hide pt-20 pb-8">
         <div className="flex animate-marquee space-x-6 px-6">
           {[...activities, ...activities].map((activity, index) => (
             <motion.div
@@ -78,7 +78,7 @@ export const VolunteerActivities = () => {
               whileHover={{ scale: 1.05, y: -8 }}
               className="flex-shrink-0 w-80 relative group cursor-pointer"
             >
-              <div className="bg-card border border-border rounded-2xl p-4 transition-all duration-300 relative overflow-hidden group-hover:shadow-accent/20 group-hover:shadow-2xl">
+              <div className="bg-card border border-border rounded-2xl p-4 transition-all duration-300 relative overflow-visible group-hover:shadow-accent/20 group-hover:shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                 <img
                   src={activity.image}
