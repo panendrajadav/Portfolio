@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
+import { getImageUrl } from "@/utils/assets";
 
 export const Certifications = () => {
   const getCompanyLogo = (issuer: string) => {
     if (issuer === "Google Cloud") return "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg";
     if (issuer === "Cisco") return "https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg";
-    if (issuer === "Cognizant") return "/cognizant.png";
+    if (issuer === "Cognizant") return getImageUrl("cognizant.png");
     return null;
   };
 
