@@ -47,7 +47,7 @@ export const GitHubActivity = () => {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">GitHub Activity</h2>
           <p className="text-lg text-muted-foreground mb-4">
-            My contributions and activity on GitHub over this year.
+            My contributions and activity on GitHub over the past year.
           </p>
           <div className="mb-8">
             <span className="text-2xl font-bold text-accent">{totalContributions.toLocaleString()} total contributions</span>
