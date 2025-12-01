@@ -143,6 +143,16 @@ All colors MUST be HSL.
   .animate-marquee-reverse {
     animation: marquee-reverse 30s linear infinite;
   }
+
+  /* Utility to standardize small profile / author images */
+  .profile-image {
+    width: 40px; /* equal width */
+    height: 40px; /* equal height */
+    border-radius: 50%; /* make round */
+    object-fit: cover; /* keep aspect ratio and crop */
+    display: inline-block;
+    overflow: hidden;
+  }
   
   @keyframes marquee {
     0% {
