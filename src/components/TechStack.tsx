@@ -9,19 +9,19 @@ import { FaJava } from "react-icons/fa";
 
 export const TechStack = () => {
   const CosmosIcon = ({ className }: { className?: string }) => (
-    <img src="cosmos.png" alt="Cosmos DB" className={className} />
+    <img src="/cosmos.png" alt="Cosmos DB" className={className} />
   );
 
   const AzureIcon = ({ className }: { className?: string }) => (
-    <img src="azure.png" alt="Microsoft Azure" className={className} />
+    <img src="/azure.png" alt="Microsoft Azure" className={className} />
   );
 
   const ArchIcon = ({ className }: { className?: string }) => (
-    <img src="arch.png" alt="BlackArch Linux" className={className} />
+    <img src="/arch.png" alt="BlackArch Linux" className={className} />
   );
 
   const GCPIcon = ({ className }: { className?: string }) => (
-    <img src="gcp.png" alt="Google Cloud Platform" className={className} />
+    <img src="/gcp.png" alt="Google Cloud Platform" className={className} />
   );
 
   const techCategories = [
