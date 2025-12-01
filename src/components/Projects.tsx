@@ -32,18 +32,18 @@ export const Projects = () => {
       highlight: true,
     },
     {
-      title: "EcocycleHub",
-      description: "IoT-based Android app developed at HCLTech for automating campus bicycle booking, tracking, and returns using smart locks. Promotes sustainable commuting and reduces campus emissions.",
-      tags: ["Java", "Android", "IoT", "Firebase"],
-      github: "https://github.com/panendrajadav/EcocycleHub",
-      highlight: true,
-    },
-    {
       title: "Voxfusion",
       description: "Python-based AI voice assistant that performs system tasks like offline and online operations, taking screenshots, and setting reminders through conversational AI powered by Ollama Gemma.",
       tags: ["Python", "Ollama", "Voice Assistant", "NLP"],
       github: "https://github.com/panendrajadav/Voxfusion",
       highlight: false,
+    },
+    {
+      title: "EcocycleHub",
+      description: "IoT-based Android app developed at HCLTech for automating campus bicycle booking, tracking, and returns using smart locks. Promotes sustainable commuting and reduces campus emissions.",
+      tags: ["Java", "Android", "IoT", "Firebase"],
+      github: "https://github.com/panendrajadav/EcocycleHub",
+      highlight: true,
     },
   ];
 

@@ -72,7 +72,7 @@ export const VolunteerActivities = () => {
 
       <div className="w-full overflow-x-auto scrollbar-hide pt-20 pb-8">
         <div className="flex animate-marquee space-x-6 px-6">
-          {[...activities, ...activities].map((activity, index) => (
+          {[...activities, ...activities, ...activities].map((activity, index) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.05, y: -8 }}

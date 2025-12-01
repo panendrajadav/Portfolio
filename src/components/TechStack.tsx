@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { 
   SiPython, SiJavascript, SiTypescript, SiReact, SiNextdotjs, 
   SiTailwindcss, SiNodedotjs, SiMongodb, SiMysql, SiScikitlearn, 
-  SiGit, SiPandas, SiNumpy, SiSolidity, SiAndroid, SiHuggingface
+  SiGit, SiPandas, SiNumpy, SiSolidity, SiAndroid, SiHuggingface, SiKubernetes
 } from "react-icons/si";
 import { FaDatabase } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
@@ -36,6 +36,7 @@ export const TechStack = () => {
         { name: "BlackArch Linux", icon: ArchIcon, color: "text-[#000000]" },
         { name: "Google Cloud", icon: GCPIcon, color: "text-[#4285F4]" },
         { name: "Microsoft Azure", icon: AzureIcon, color: "text-[#0078D4]" },
+        { name: "Kubernetes", icon: SiKubernetes, color: "text-[#326CE5]" },
       ],
     },
     {
@@ -53,6 +54,7 @@ export const TechStack = () => {
         { name: "Node.js", icon: SiNodedotjs, color: "text-[#339933]" },
         { name: "MongoDB", icon: SiMongodb, color: "text-[#47A248]" },
         { name: "MySQL", icon: SiMysql, color: "text-[#4479A1]" },
+        { name: "Oracle", icon: FaDatabase, color: "text-[#F80000]" },
         // Use the CosmosIcon component to render the cosmos.png image
         { name: "Cosmos DB", icon: CosmosIcon, color: "text-[#0078D4]" },
       ],

@@ -3,7 +3,7 @@ import profileImage from "@/assets/profile.jpg";
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden">
       {/* Background decoration */}
       <motion.div
         initial={{ opacity: 0 }}
