@@ -16,6 +16,7 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
+    assetsDir: "assets",
     sourcemap: false,
     minify: "esbuild",
     rollupOptions: {
@@ -25,6 +26,9 @@ export default defineConfig({
           animations: ["framer-motion"],
           icons: ["react-icons"],
         },
+        assetFileNames: "assets/[name]-[hash][extname]",
+        chunkFileNames: "assets/[name]-[hash].js",
+        entryFileNames: "assets/[name]-[hash].js",
       },
     },
   },
