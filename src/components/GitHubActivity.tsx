@@ -11,24 +11,28 @@ export const GitHubActivity = () => {
   useEffect(() => {
     const fetchGitHubData = async () => {
       try {
-        // Fetch all-time contributions
-        const contributionsResponse = await fetch(`https://github-contributions-api.jogruber.de/v4/panendrajadav`);
-        const contributionsData = await contributionsResponse.json();
-        
-        // Sum all years from the response
+        // Fetch contributions from multiple years and sum them
+        const currentYear = new Date().getFullYear();
+        const startYear = 2020; // Adjust based on when you started using GitHub
         let totalContribs = 0;
-        if (contributionsData.contributions) {
-          contributionsData.contributions.forEach(yearData => {
-            totalContribs += yearData.count || 0;
-          });
+        
+        for (let year = startYear; year <= currentYear; year++) {
+          try {
+            const yearResponse = await fetch(`https://github-contributions-api.jogruber.de/v4/panendrajadav?y=${year}`);
+            const yearData = await yearResponse.json();
+            
+            // Sum all daily contributions for this year
+            if (yearData.contributions) {
+              yearData.contributions.forEach(day => {
+                totalContribs += day.count || 0;
+              });
+            }
+          } catch (err) {
+            console.log(`Failed to fetch ${year} contributions`);
+          }
         }
         
-        // Fallback to total field if available
-        if (totalContribs === 0) {
-          totalContribs = contributionsData.total?.all || contributionsData.total?.lastYear || 189;
-        }
-        
-        setTotalContributions(totalContribs);
+        setTotalContributions(totalContribs || 189);
 
         // Fetch recent repositories
         const reposResponse = await fetch('https://api.github.com/users/panendrajadav/repos?sort=updated&per_page=3');
